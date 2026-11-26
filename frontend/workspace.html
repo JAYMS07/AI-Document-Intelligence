@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowBase | Workspace</title>
+    <link rel="stylesheet" href="css/workspace.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">K</div>
+            <span>KnowBase</span>
+        </div>
+
+        <p class="nav-label">NAVIGATION</p>
+        <a href="index.html" class="nav-link">▦ Dashboard</a>
+        <a href="index.html" class="nav-link active">▤ Workspaces</a>
+        <a href="#" class="nav-link">▧ Documents</a>
+        <a href="#" class="nav-link">◷ Chat History</a>
+
+        <div class="sidebar-bottom">
+            <div class="user-avatar">U</div>
+            <div>
+                <strong>Guest User</strong>
+                <small>Development mode</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="breadcrumb">
+                <a href="index.html">Dashboard</a> / <span id="breadcrumbName">HR Workspace</span>
+            </div>
+            <span class="system-status">● System online</span>
+        </header>
+
+        <section class="workspace-header">
+            <div>
+                <p class="eyebrow">YOUR KNOWLEDGE SPACE</p>
+                <h1 id="workspaceTitle">HR Workspace</h1>
+                <p id="workspaceDescription">
+                    Manage HR documents and find company policies using AI.
+                </p>
+            </div>
+
+            <div class="workspace-badge" id="workspaceIcon">♙</div>
+        </section>
+
+        <section class="workspace-selector">
+            <label for="workspaceSelect">CURRENT WORKSPACE</label>
+            <select id="workspaceSelect">
+                <option value="HR">HR Workspace</option>
+                <option value="Technical Documentation">Technical Documentation</option>
+                <option value="Finance">Finance Workspace</option>
+                <option value="General Company">General Company</option>
+            </select>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <span>Total Documents</span>
+                <h2 id="documentCount">0</h2>
+                <small>Uploaded to this workspace</small>
+            </div>
+
+            <div class="stat-card">
+                <span>AI Conversations</span>
+                <h2>0</h2>
+                <small>Conversations started</small>
+            </div>
+
+            <div class="stat-card">
+                <span>Workspace Status</span>
+                <h2 class="status-text">Active</h2>
+                <small>Ready to use</small>
+            </div>
+        </section>
+
+        <section class="workspace-layout">
+
+            <!-- Document Library -->
+
+            <div class="document-panel">
+                <div class="panel-heading">
+                    <div>
+                        <h2>Document Library</h2>
+                        <p>Manage your workspace knowledge.</p>
+                    </div>
+                </div>
+
+                <label for="documentUpload" class="upload-box">
+                    <div class="upload-icon">↑</div>
+                    <h3>Upload Documents</h3>
+                    <p>Click to select PDF, DOCX or TXT files</p>
+                    <span>Maximum 10 MB per file (demo limit)</span>
+                </label>
+
+                <input
+                    type="file"
+                    id="documentUpload"
+                    accept=".pdf,.docx,.txt"
+                    multiple
+                    hidden
+                >
+
+                <div class="document-toolbar">
+                    <h3>Your Documents</h3>
+                    <input
+                        type="text"
+                        id="documentSearch"
+                        placeholder="Search documents..."
+                    >
+                </div>
+
+                <div id="documentList" class="document-list">
+                    <div class="empty-state">
+                        <div>▤</div>
+                        <h3>No documents yet</h3>
+                        <p>Upload documents to start building your knowledge base.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Chat -->
+
+            <div class="chat-panel">
+
+                <div class="chat-heading">
+                    <div class="ai-avatar">✦</div>
+                    <div>
+                        <h2>AI Assistant</h2>
+                        <p>Workspace knowledge assistant</p>
+                    </div>
+                    <span class="online-indicator"></span>
+                </div>
+
+                <div class="chat-messages" id="chatMessages">
+                    <div class="ai-message">
+                        <div class="message-avatar">✦</div>
+                        <div class="message-content">
+                            <strong>KnowBase AI</strong>
+                            <p>
+                                Hello! I'm your workspace assistant.
+                                Upload documents and you'll be able to ask
+                                questions about their contents.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="suggestion-area">
+                    <p>Try asking:</p>
+                    <button class="suggestion">Summarize my documents</button>
+                    <button class="suggestion">Find important information</button>
+                </div>
+
+                <form id="chatForm" class="chat-input-area">
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Ask something about your documents..."
+                        autocomplete="off"
+                    >
+                    <button type="submit">↑</button>
+                </form>
+
+                <p class="chat-disclaimer">
+                    Demo interface. AI responses will be connected later.
+                </p>
+
+            </div>
+
+        </section>
+
+        <footer>
+            KnowBase · AI Document Intelligence
+        </footer>
+
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/workspace.js"></script>
+</body>
+</html>

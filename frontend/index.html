@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KnowBase | AI Document Intelligence</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">K</div>
+            <span>KnowBase</span>
+        </div>
+
+        <nav class="navigation">
+            <p class="nav-label">MENU</p>
+            <a href="#" class="nav-link active">▦ Dashboard</a>
+            <a href="#" class="nav-link">▤ Workspaces</a>
+            <a href="#" class="nav-link">▧ Documents</a>
+            <a href="#" class="nav-link">◷ Chat History</a>
+
+            <p class="nav-label secondary-label">PREFERENCES</p>
+            <a href="#" class="nav-link">⚙ Settings</a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="user-avatar">U</div>
+            <div>
+                <strong>Guest User</strong>
+                <small>Development mode</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="breadcrumb">Workspace / Dashboard</p>
+            </div>
+            <div class="topbar-right">
+                <span class="status-dot"></span>
+                <span>System online</span>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <div>
+                <p class="eyebrow">AI DOCUMENT INTELLIGENCE</p>
+                <h1>Your knowledge, <span>connected.</span></h1>
+                <p class="welcome-description">
+                    Search, understand, and interact with your organization's
+                    documents using AI.
+                </p>
+            </div>
+
+            <div class="welcome-symbol">✳</div>
+        </section>
+
+        <section class="search-section">
+            <span class="search-icon">⌕</span>
+            <input
+                type="text"
+                id="workspaceSearch"
+                placeholder="Search your workspaces..."
+            >
+            <span class="search-shortcut">Search</span>
+        </section>
+
+        <section class="workspace-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Your Workspaces</h2>
+                    <p>Choose a workspace to explore its knowledge.</p>
+                </div>
+                <span class="workspace-count">4 WORKSPACES</span>
+            </div>
+
+            <div class="workspace-grid" id="workspaceGrid">
+
+                <article class="workspace-card" data-name="hr">
+                    <div class="card-top">
+                        <div class="workspace-icon hr-icon">♙</div>
+                        <span class="card-menu">•••</span>
+                    </div>
+                    <h3>HR Workspace</h3>
+                    <p>
+                        Employee policies, recruitment documents,
+                        leave policies, and HR guidelines.
+                    </p>
+                    <div class="card-footer">
+                        <span>Human Resources</span>
+                        <button class="open-workspace" data-workspace="HR">
+                            Open →
+
+                            
+                        </button>
+                    </div>
+                </article>
+
+                <article class="workspace-card" data-name="technical">
+                    <div class="card-top">
+                        <div class="workspace-icon tech-icon">⌘</div>
+                        <span class="card-menu">•••</span>
+                    </div>
+                    <h3>Technical Documentation</h3>
+                    <p>
+                        Technical manuals, API documentation,
+                        architecture, and development guides.
+                    </p>
+                    <div class="card-footer">
+                        <span>Engineering</span>
+                        <button class="open-workspace" data-workspace="Technical Documentation">
+                            Open →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="workspace-card" data-name="finance">
+                    <div class="card-top">
+                        <div class="workspace-icon finance-icon">₹</div>
+                        <span class="card-menu">•••</span>
+                    </div>
+                    <h3>Finance Workspace</h3>
+                    <p>
+                        Financial reports, budgets, invoices,
+                        and company expense documents.
+                    </p>
+                    <div class="card-footer">
+                        <span>Finance</span>
+                        <button class="open-workspace" data-workspace="Finance">
+                            Open →
+                        </button>
+                    </div>
+                </article>
+
+                <article class="workspace-card" data-name="general">
+                    <div class="card-top">
+                        <div class="workspace-icon general-icon">▤</div>
+                        <span class="card-menu">•••</span>
+                    </div>
+                    <h3>General Company</h3>
+                    <p>
+                        Company announcements, general guidelines,
+                        reports, and shared organizational knowledge.
+                    </p>
+                    <div class="card-footer">
+                        <span>All Departments</span>
+                        <button class="open-workspace" data-workspace="General Company">
+                            Open →
+                        </button>
+                    </div>
+                </article>
+
+            </div>
+
+            <p id="emptyMessage" class="empty-message" hidden>
+                No matching workspaces found.
+            </p>
+        </section>
+
+        <section class="info-section">
+            <div class="info-card">
+                <div class="info-icon">✦</div>
+                <div>
+                    <h3>AI-powered knowledge assistant</h3>
+                    <p>
+                        Ask questions across your documents and get
+                        contextual answers with source references.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            KnowBase · AI Document Intelligence Project
+        </footer>
+
+    </main>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
